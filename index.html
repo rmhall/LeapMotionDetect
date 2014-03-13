@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>LeapMotion Device Detect and Ad Display</title>
+    <script src="LeapMotionDetect.min.js"></script>
+</head>
+<body>    
+
+<script type="text/javascript">
+/*
+function LeapMotionDetect(callback, args) {
+  var portComm=0;
+  var loop;
+	function loadLeapLib() {
+		loop = setInterval(checkLeapLib, 100);
+		newScript = document.createElement('script');
+		newScript.type = 'text/javascript';
+		newScript.src = 'http://js.leapmotion.com/leap-0.4.1.js';
+		document.getElementsByTagName('head')[0].appendChild(newScript);
+	}
+	function checkLeapLib() {
+		if(typeof Leap == 'object') {
+			console.log("LeapJS Library Version "+Leap.version.full+" Loaded!");
+			clearInterval(loop);
+			callback(args);
+		} else {
+			console.log("Waiting...");
+		}
+	}
+  setTimeout(function() { 
+  	if(portComm<1) { console.log("LEAP NOT DETECTED"); ws.close; ws.onmessage = function (){}; } 
+  	}, 2000);
+  if ("WebSocket" in window) {
+     console.log("WebSocket is supported by your Browser!");
+     // Let us open a web socket
+     var ws = new WebSocket("ws://localhost:6437");
+     ws.onopen = function() {
+        // Web Socket is connected, send data using send()
+        ws.send("");
+        console.log("Detecting LEAP PORT...");
+     };
+     ws.onmessage = function (evt) { 
+        var received_msg = evt.data;
+        //console.log(evt);
+       // console.log("Message is received..."+received_msg);
+        
+        obj = JSON.parse(received_msg);
+        if(obj.version && portComm==0) {
+       	 	portComm++;
+        	console.log("LEAP PORT DETECTED");
+        } else if (obj.currentFrameRate && portComm>0) { 
+        	portComm++;
+			ws.close();
+			console.log("Load the full Leap Library!");
+        	ws.onmessage = function() {};
+        	loadLeapLib();
+        	
+        } else {
+        	console.log("LEAP NOT DETECTED");
+        	ws.close();
+        	ws.onmessage = function() {};
+        }
+     };
+     ws.onclose = function() { 
+        // websocket is closed.
+        console.log("Connection is closed..."); 
+     };
+  } else {
+     // The browser doesn't support WebSocket
+     console.log("WebSocket NOT supported by your Browser!");
+  }
+
+  
+}
+*/
+
+myFunc = function(LeapPresent, args) {
+	console.log("Leap is available: "+LeapPresent);
+	console.log("args: "+args);
+}
+
+LeapMotionDetect(myFunc, "1234");
+
+
+</script>
+
+</script>
+
+</body>
+</html>
