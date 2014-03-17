@@ -6,7 +6,7 @@ function LeapMotionDetect(callback, args) {
 		loop = setInterval(checkLeapLib, 100);
 		newScript = document.createElement('script');
 		newScript.type = 'text/javascript';
-		newScript.src = 'http://js.leapmotion.com/leap-0.4.2.js';
+		newScript.src = 'http://js.leapmotion.com/leap-0.4.2.min.js';
 		document.getElementsByTagName('head')[0].appendChild(newScript);
 	}
 
