@@ -9,12 +9,14 @@ Perfect for Advertisements and other lightweight apps, games, etc. that need to 
 
 USAGE:
 
+```javascript
 function myApp(LeapPresent, args) {
 	console.log("Leap is available: "+LeapPresent);
 	console.log("Callback args: "+args);
 }
 
 LeapMotionDetect(myApp, "dummy");
+```
 
 
 Above working example contained within index.html.
