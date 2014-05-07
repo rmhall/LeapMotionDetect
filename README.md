@@ -10,13 +10,13 @@ Perfect for Advertisements and other lightweight apps, games, etc. that need to 
 USAGE:
 
 ```javascript
-function myApp(LeapPresent, args) {
+function myApp(LeapPresent, args, version) {
 	console.log("Leap is available: "+LeapPresent);
 	console.log("Callback args: "+args);
 }
 
-LeapMotionDetect(myApp, "dummy");
+LeapMotionDetect(myApp, "dummy", "0.5.0");
 ```
 
 
-Above working example contained within index.html.
+Above working example contained within index.html. The third optional argument recently added, "version", reflects the version number of the LeapJS library to load in case of a dependency on a specific version. 0.5.0 is the latest as of 05/07/2014. Another minor change is that the http: has been dropped from the url so that the library will be loaded from http or https as dictated by the container page.
