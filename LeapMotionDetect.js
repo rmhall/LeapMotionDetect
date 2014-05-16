@@ -9,7 +9,7 @@ function LeapMotionDetect(callback, args, version) {
 		if(version) {
 			newScript.src = '//js.leapmotion.com/leap-'+version+'.js';
 		} else {
-			newScript.src = '//js.leapmotion.com/leap-0.5.0.js';
+			newScript.src = '//js.leapmotion.com/leap-0.6.0.js';
 		}
 		document.getElementsByTagName('head')[0].appendChild(newScript);
 	}
