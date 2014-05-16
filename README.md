@@ -15,8 +15,8 @@ function myApp(LeapPresent, args, version) {
 	console.log("Callback args: "+args);
 }
 
-LeapMotionDetect(myApp, "dummy", "0.5.0");
+LeapMotionDetect(myApp, "dummy", "0.6.0");
 ```
 
 
-Above working example contained within index.html. The third optional argument recently added, "version", reflects the version number of the LeapJS library to load in case of a dependency on a specific version. 0.5.0 is the latest as of 05/07/2014. Another minor change is that the http: has been dropped from the url so that the library will be loaded from http or https as dictated by the container page.
+Above working example contained within index.html. The third optional argument recently added, "version", reflects the version number of the LeapJS library to load in case of a dependency on a specific version. 0.6.0 is the latest as of 05/16/2014 and supports the new beta skeletal model Leap recently introduced. Another minor change is that the http: has been dropped from the url so that the library will be loaded from http or https as dictated by the container page.
